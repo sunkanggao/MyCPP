@@ -68,12 +68,12 @@ void BST<T>::inorderAux(ostream & out, BST<T>::BinNodePointer subtreeRoot) const
 }
 
 
-template<typename T>
+template <typename T>
 inline void BST<T>::graph(ostream & out) const
 { graphAux(out, 0, myRoot); }
 
 
-template<typename T>
+template <typename T>
 void BST<T>::graphAux(ostream & out, int indent, BST<T>::BinNodePointer subtreeRoot) const
 {
     if(subtreeRoot != 0)
@@ -85,7 +85,7 @@ void BST<T>::graphAux(ostream & out, int indent, BST<T>::BinNodePointer subtreeR
 }
 
 
-template<typename T>
+template <typename T>
 inline bool BST<T>::search(const T & item) const
 {
     BST<T>::BinNodePointer locptr = myRoot;
@@ -103,12 +103,12 @@ inline bool BST<T>::search(const T & item) const
 }
 
 
-template<typename T>
+template <typename T>
 void BST<T>::insert(const T & item)
 { insertAux(myRoot, item); }
 
 
-template<typename T>
+template <typename T>
 void BST<T>::insertAux(BST<T>::BinNodePointer & subtreeRoot, const T & item)
 {
     if(subtreeRoot == 0)
@@ -122,7 +122,7 @@ void BST<T>::insertAux(BST<T>::BinNodePointer & subtreeRoot, const T & item)
 }
 
 
-template<typename T>
+template <typename T>
 void BST<T>::remove(const T & item)
 {
     bool found;
@@ -165,7 +165,7 @@ void BST<T>::remove(const T & item)
 }
 
 
-template<typename T>
+template <typename T>
 void BST<T>::search2(const T & item, bool & found, 
                 BST<T>::BinNodePointer & locptr, 
                 BST<T>::BinNodePointer & parent) const
