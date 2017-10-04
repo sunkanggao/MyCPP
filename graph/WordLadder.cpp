@@ -77,10 +77,10 @@ int main()
 {
     set<string> dict;
     dict.insert("hot");
-	dict.insert("dot");
-	dict.insert("dog");
-	dict.insert("lot");
-	dict.insert("log");
+    dict.insert("dot");
+    dict.insert("dog");
+    dict.insert("lot");
+    dict.insert("log");
     string start = "hit";
     string end = "cog";
     cout << CalcLadderLength(start, end, dict) << endl;
