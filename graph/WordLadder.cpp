@@ -45,7 +45,7 @@ int CalcLadderLength(const string& start, const string& end, const set<string>& 
     queue<string> q;
     q.push(start);
     vector<string> children;    //从当前节点可扩展得到的新节点的集合
-    set<string> visit;
+    set<string> visit;    //已访问过的节点集合
     int step = 0;
     string cur;
     int curNumber = 1;    //当前层剩余节点数        
