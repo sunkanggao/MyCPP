@@ -48,7 +48,7 @@ int Find(int* a, int x, int left, int right)
 int main()
 {
     ifstream iFile;
-    iFile.open("E:\\project\\algoCPP\\Prime.txt");    //读入素数
+    iFile.open("Prime.txt");    //读入素数
     vector<int> a;
     int i;
     while(iFile >> i)
