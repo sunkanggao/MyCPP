@@ -9,28 +9,24 @@ void Print(int* a, int size)
 }
 
 int temp[100];
-void Merge(int* a, int low, int mid, int high)
+void Merge(int*a, int low, int mid, int high)
 {
-    /*
-    归并两个子数组
-    */
-    int i = low;
-    int j = mid + 1;
-    int size = 0;
-    for(; (i <= mid) && (j <= high); size++)
+    int i = low, j = mid + 1, k = 0;
+    while((i <= mid) && (j <= high))
     {
         if(a[i] < a[j])
-            temp[size] = a[i++];
+            temp[k++] = a[i++];
         else
-            temp[size] = a[j++];
+            temp[k++] = a[j++];
     }
+
     while(i <= mid)
-        temp[size++] = a[i++];
+        temp[k++] = a[i++];
     while(j <= high)
-        temp[size++] = a[j++];
-    
-    for(i = 0; i < size; i++)
-        a[low + i] = temp[i];
+        temp[k++] = a[j++];
+
+    for(i = 0; i < k; i++)
+        a[low + i] = temp[i];    
 }
 
 void MergeSort(int* a, int low, int high)
